@@ -20,7 +20,8 @@ jobs:
           node-version: 20
 
       - run: npm ci
-      - run: npm run build
+      - run: npm run build    # builds the Next.js project
+      - run: npm run export   # generates the 'out' folder
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
