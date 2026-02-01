@@ -119,7 +119,7 @@ export default function ChatBot() {
               color: '#999', 
               marginTop: 20 
             }}>
-              Ask me for product recommendations! Try "show me some shorts" or "I need a blue jacket"
+              Ask me for product recommendations! Try &quot;show me some shorts&quot; or &quot;I need a blue jacket&quot;
             </div>
           )}
           {messages.map((m, i) => (
