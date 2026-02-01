@@ -12,9 +12,7 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
-  // 👇 EXPLICITLY pass id
-  const { id } = await params
-  console.log(id)
+  const { id } = await params;
+  console.log(id);
   return <ProductClient productId={id} />;
 }
-

@@ -27,6 +27,9 @@ export default function Navbar() {
         Sapient Pride
       </Typography>
     </Link>
+    <Link href={'/chat'}>
+      My Stylist
+      </Link>
 
     {/* Spacer pushes everything else to the right */}
     <Box sx={{ flexGrow: 1 }} />

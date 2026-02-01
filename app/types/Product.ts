@@ -10,10 +10,11 @@ export interface Product {
   usage: string;
   productdisplayname: string;
   filename: string;
-  link: string;
+  link: string; //Link to live image URL 
   price: number;
   discounted_price?: number;
   on_sale: boolean;
   stock: number;
   tag?: string;
+  trendiness?: number;
 }
