@@ -17,10 +17,17 @@ export default function ProductClient({ productId }: { productId: string }) {
       .then(res => setProduct(res.data));
 
     if (isAuthenticated) {
-      fetch(`${process.env.NEXT_PUBLIC_API}/likes/${user?.email}`)
-        .then(res => res.json())
-        .then(res => setLiked(res.data.liked));
-    }
+    fetch(`${process.env.NEXT_PUBLIC_API}/likes/${user?.email}`)
+      .then(res => res.json())
+      .then(res => {
+        // res.liked is now an array of product IDs
+        const likedIds: string[] = res.liked || [];
+        setLiked(likedIds.includes(productId));
+      })
+      .catch(err => {
+        console.error('Error fetching likes:', err);
+      });
+  }
   }, [productId, isAuthenticated, user?.email]);
 
   const toggleLike = async () => {
