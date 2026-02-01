@@ -7,6 +7,7 @@ import {
   Stack
 } from "@mui/material";
 import { Product } from "../types/Product";
+import Link from "next/link";
 
 interface Props {
   product: Product;
@@ -14,6 +15,7 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
+    <Link href={`/products/${product.id}`}>
     <Card>
       <CardMedia
         component="img"
@@ -41,5 +43,6 @@ export default function ProductCard({ product }: Props) {
         </Typography>
       </CardContent>
     </Card>
+    </Link>
   );
 }

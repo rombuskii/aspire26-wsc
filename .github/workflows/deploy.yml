@@ -25,6 +25,9 @@ jobs:
         env:
           NEXT_PUBLIC_API: ${{ secrets.NEXT_PUBLIC_API }}
           NEXT_PUBLIC_REDIRECT_URI: ${{secrets.NEXT_PUBLIC_REDIRECT_URI}}
+          NEXT_PUBLIC_AUTH0_CLIENT_ID: ${{secrets.NEXT_PUBLIC_AUTH0_CLIENT_ID}}
+          NEXT_PUBLIC_AUTH0_DOMAIN: ${{secrets.NEXT_PUBLIC_AUTH0_DOMAIN}}
+
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
