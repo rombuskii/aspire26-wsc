@@ -60,7 +60,7 @@ export default function SearchBox() {
             {results.map((r) => (
             <Link key={r.id} href={`/products/${r.id}`}>
               <li className="p-2 hover:bg-gray-100">
-                {r.productdisplayname} ({r.baseColour}) - ${r.price}
+                {r.productdisplayname} ({r.basecolour}) - ${r.price}
               </li>
               </Link>
             ))}

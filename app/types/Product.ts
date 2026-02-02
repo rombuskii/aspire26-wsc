@@ -3,8 +3,8 @@ export interface Product {
   gender: string;
   masterCategory: string;
   subCategory: string;
-  articleType: string;
-  baseColour: string;
+  articletype: string;
+  basecolour: string;
   season: string;
   year: number;
   usage: string;
